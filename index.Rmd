@@ -15,13 +15,15 @@ brand: |-
 
 This is the landing page for the short course "Analysis and Visualization of Large Complex Data with Tessera" that will be given at University of Technology Sydney on October 13, 2015 from 9am to 5pm.
 
+Links to data download and slides will be made available here on the day of the course.
+
 Please check back periodically for updates.
 
 <!-- ## Links for the Tutorial -->
 
 ## Download Tutorial Materials ##
 
-To avoid network issues at the tutorial and to help get things started off smoothly, please download the required packages and data sets listed below prior to the tutorial.  Additional materials such as slides and example code will be made available at the time of the tutorial.
+To avoid network issues at the tutorial and to help get things started off smoothly, please download the required packages and data sets listed below prior to the tutorial.
 
 1. If you do not already have the most recent version of R, (version 3.2), please [download](http://cran.r-project.org) and install it.
 
@@ -30,20 +32,12 @@ To avoid network issues at the tutorial and to help get things started off smoot
 3. Open R and execute the following commands to install Tessera and other libraries you'll need for the tutorials:
 
     ```r
-    install.packages(c("maps", "ggplot2", "gridExtra", "lubridate", "geosphere", "devtools"))
-    devtools::install_github("tesseradata/datadr")
-    devtools::install_github("tesseradata/trelliscope")
-    devtools::install_github("hafen/housingData")
-    devtools::install_github("bokeh/rbokeh")
+    options(repos = c(tessera = "http://packages.tessera.io",
+      getOption("repos")))
+
+    install.packages(c("datadr", "trelliscope", "rbokeh",
+      "housingData", "lubridate"))
     ```
-
-**For Windows users:**  when installing `devtools`, you may notice the following warning, which you can ignore:
-
-```r
-> library(devtools)
-WARNING: Rtools is required to build R packages, but no version of Rtools compatible with R 3.x was found. (Only the following incompatible version(s) of Rtools were found:3.2)
-Please download and install Rtools 3.1 from http://cran.r-project.org/bin/windows/Rtools/ and then run find_rtools().
-```
 
 To test your installation, you can load R and try the following commands:
 
@@ -61,30 +55,8 @@ housing %>%
 
 This should bring up an interactive trelliscope display in your web browser.
 
-<!-- 4. Download the NYC Taxi sample data and unzip it on your computer: [taxiOneWeek.csv.zip](http://ml.stat.purdue.edu/user2015/taxiOneWeek.csv.zip)
- -->
-
 ## Additional Reading Material ##
 
 If you want to read up on any of the Tessera components prior to the tutorial, you can look at the [references section on tessera.io](http://tessera.io/#references).
 
-
-<!-- <span class="label label-success">**Note:**</span> with many participants installing from the same location at the same time, there may be some issues with github rate limiting at the conference.  If you try the above `install_github` commands and get an error to the effect of "(403) Forbidden", we have made the github packages available at another location:
-
-```r
-# only run this if the install commands above were not successful
-install.packages(c("maps", "ggplot2", "gridExtra", "lubridate", "geosphere", "devtools"))
-
-packages <- c("datadr_0.7.5.8", "housingData_0.2", "rbokeh_0.2.3.1", "trelliscope_0.8.4")
-urls <- sprintf("http://ml.stat.purdue.edu/user2015/packages/%s.tar.gz", packages)
-
-devtools::install_url(urls)
-```
--->
-
-<!-- 6. The zip file contains a folder called **exercises**.  Set your working directory in R to this folder,
-using something like `setwd("mypaths/exercises")`.  The **exercises** folder
-contains a folder for each of the three exercises:  **power_exercise**, **netflow_exercise**, and **housing_exercise**.
-Each exercise folder has a single **.R** file which contains the code for the exercise. Open that
-file in your editor of choice and begin! -->
 
