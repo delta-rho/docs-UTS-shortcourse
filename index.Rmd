@@ -35,6 +35,10 @@ To avoid network issues at the tutorial and to help get things started off smoot
     options(repos = c(tessera = "http://packages.tessera.io",
       getOption("repos")))
 
+    # also try this if packages.tessera.io isn't working:
+    # options(repos = c(tessera = "http://ml.stat.purdue.edu/packages/",
+    #  getOption("repos")))
+
     install.packages(c("datadr", "trelliscope", "rbokeh",
       "housingData", "lubridate"))
     ```
