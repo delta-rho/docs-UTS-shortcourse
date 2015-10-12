@@ -15,11 +15,11 @@ brand: |-
 
 This is the landing page for the short course "Analysis and Visualization of Large Complex Data with Tessera" that will be given at University of Technology Sydney on October 13, 2015 from 9am to 5pm.
 
-Links to data download and slides will be made available here on the day of the course.
+## Slides ##
 
-Please check back periodically for updates.
+The slides for the short course are located here: [http://slides.com/hafen/tessera-uts2015/](http://slides.com/hafen/tessera-uts2015/).
 
-<!-- ## Links for the Tutorial -->
+To follow along and stay on the same slide as the presenter, visit this link: [http://slides.com/hafen/tessera-uts2015/live](http://slides.com/hafen/tessera-uts2015/live).
 
 ## Download Tutorial Materials ##
 
@@ -38,6 +38,8 @@ To avoid network issues at the tutorial and to help get things started off smoot
     install.packages(c("datadr", "trelliscope", "rbokeh",
       "housingData", "lubridate"))
     ```
+
+4. Download and unzip the data and code examples: [http://ml.stat.purdue.edu/uts2015/tessera_shortcourse.zip](http://ml.stat.purdue.edu/uts2015/tessera_shortcourse.zip).
 
 To test your installation, you can load R and try the following commands:
 
